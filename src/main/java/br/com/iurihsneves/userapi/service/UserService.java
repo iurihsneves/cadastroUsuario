@@ -5,11 +5,13 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.iurihsneves.userapi.dto.UserDto;
 import br.com.iurihsneves.userapi.model.User;
 import br.com.iurihsneves.userapi.repository.UserRepository;
 
+@Service
 public class UserService {
 
     @Autowired
@@ -23,8 +25,8 @@ public class UserService {
             .collect(Collectors.toList());
     }
 
-    public UserDto findById(long userId) {
-        Optional<User> user = userRepository.findById(userId);
+    public UserDto findById(long id) {
+        Optional<User> user = userRepository.findById(id);
         if (user.isPresent()) {
             return UserDto.convert(user.get());
         }
