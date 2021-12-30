@@ -1,0 +1,10 @@
+target
+src/test
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
