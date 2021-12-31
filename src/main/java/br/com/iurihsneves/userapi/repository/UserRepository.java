@@ -15,6 +15,6 @@ public interface UserRepository  extends JpaRepository<User, Long>{
 
     User deleteByCpf(String cpf);
 
-    List<User> queryByNomeLike(String name);
+    List<User> findByNomeIgnoreCaseContaining(String name);
 
 }

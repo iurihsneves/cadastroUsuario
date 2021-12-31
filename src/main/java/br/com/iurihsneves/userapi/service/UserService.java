@@ -65,7 +65,7 @@ public class UserService {
 
     public List<UserDto> queryByName(String name) {
 
-        List<User> users = userRepository.queryByNomeLike(name);
+        List<User> users = userRepository.findByNomeIgnoreCaseContaining(name);
         return users
                 .stream()
                 .map(UserDto::convert)
