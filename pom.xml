@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>br.com.iurihsneves</groupId>
 	<artifactId>user-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>user-api</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Microsserviço simples de cadastro simples de usuários</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
